@@ -1,11 +1,11 @@
-import "./App.css";
+import SearchBar from "./components/SearchBar";
+import "./styles/searchBar.css";
+import "./styles/App.css";
 
-function App() {
+export default function App() {
   return (
     <div>
-      <h1>Hello l'équipe</h1>
+      <SearchBar />
     </div>
   );
 }
-
-export default App;
