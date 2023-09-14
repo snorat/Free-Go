@@ -1,40 +1,23 @@
-import Counter from "./components/Counter";
-import logo from "./assets/logo.svg";
-
+/* eslint-disable import/no-extraneous-dependencies */
+import { useState, useEffect } from "react";
+import axios from "axios";
+import LaSelection from "./components/LaSelection";
+import "./styles/LaSelection.css";
 import "./App.css";
 
 function App() {
+  const [data, setData] = useState(null);
+  useEffect(() => {
+    axios
+      .get("https://www.themealdb.com/api/json/v1/1/random.php")
+      .then((response) => {
+        setData(response.data.meals[0]);
+      });
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React !</p>
-
-        <Counter />
-
-        <p>
-          Edit <code>App.jsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {" | "}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
+    <div className="laSelection">
+      <LaSelection meals={data} />
     </div>
   );
 }
