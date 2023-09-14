@@ -4,8 +4,12 @@ import axios from "axios";
 import LaSelection from "./components/LaSelection";
 import "./styles/LaSelection.css";
 import "./App.css";
+import SearchBar from "./components/SearchBar";
+import "./styles/searchBar.css";
+import "./styles/App.css";
 
-function App() {
+export default function App() {
+  
   const [data, setData] = useState(null);
   useEffect(() => {
     axios
@@ -14,12 +18,13 @@ function App() {
         setData(response.data.meals[0]);
       });
   }, []);
-
+  
   return (
-    <div className="laSelection">
+    <div>
+      <SearchBar />
+      <div className="laSelection">
       <LaSelection meals={data} />
+      </div>
     </div>
   );
 }
-
-export default App;
