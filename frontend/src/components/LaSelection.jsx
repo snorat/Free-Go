@@ -4,7 +4,7 @@ function LaSelection({ meals }) {
     meals && (
       <section className="laSelection">
         <div className="enTete">
-          <h3>The Free-go selection</h3>
+          <h3>Free-go selection</h3>
         </div>
         <div className="web">
           <img
