@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import LaSelection from "./components/LaSelection";
 import "./styles/LaSelection.css";
+import Footer from "./components/Footer";
+import "./styles/Footer.css";
 import "./App.css";
 import SearchBar from "./components/SearchBar";
 import "./styles/searchBar.css";
@@ -25,6 +27,7 @@ export default function App() {
       <div className="laSelection">
       <LaSelection meals={data} />
       </div>
+      <Footer />
     </div>
   );
 }
