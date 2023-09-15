@@ -2,10 +2,8 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import Content from "./components/Content";
 import Footer from "./components/Footer";
-import "./styles/Navbar.css";
 
 export default function App() {
-  
   return (
     <div className="App">
       <Navbar />
