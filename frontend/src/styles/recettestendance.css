@@ -1,0 +1,77 @@
+/* TrendRecipe.css */
+.recipe-layout {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  background-color: var(--color-second-background);
+  margin: 20px 0 20px 0;
+  padding: 3rem;
+}
+.recipe-layout > h1 {
+  width: 100%;
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: var(--font-family-1);
+}
+
+.recipe-container {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.recipe-container img {
+  max-width: 8rem;
+  height: auto;
+  transition: transform 0.2s;
+}
+
+.recipe-name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.2s;
+  transform: translateY(100%);
+  height: 100%;
+  max-width: auto;
+}
+
+.recipe-container:hover {
+  transform: scale(1.1);
+}
+
+.recipe-container:hover img {
+  transform: scale(1.2);
+}
+
+.recipe-container:hover .recipe-name {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (min-width: 620px) {
+  .recipe-layoutw {
+    gap: 50px;
+  }
+
+  .recipe-container img {
+    max-width: 20rem;
+    height: auto;
+  }
+  .recipe-container {
+    padding: 3rem;
+  }
+
+  .recipe-name {
+    font-size: 28px;
+    padding-top: 50%;
+  }
+}
