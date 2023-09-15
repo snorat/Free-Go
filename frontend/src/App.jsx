@@ -1,18 +1,14 @@
-/* eslint-disable import/no-extraneous-dependencies */
-import LaSelection from "./components/LaSelection";
-import "./styles/LaSelection.css";
-import SearchBar from "./components/SearchBar";
-import "./styles/searchBar.css";
-import Navbar from "./components/Navbar";
-import "./styles/Navbar.css";
 import "./styles/App.css";
+import Navbar from "./components/Navbar";
+import Content from "./components/Content";
+import Footer from "./components/Footer";
 
 export default function App() {
   return (
-    <div>
+    <div className="App">
       <Navbar />
-      <SearchBar />
-      <LaSelection />
+      <Content />
+      <Footer />
     </div>
   );
 }

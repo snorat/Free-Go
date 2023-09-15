@@ -3,6 +3,7 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import "../styles/Navbar.css";
 
 function Navbar() {
   const [isActive, setIsActive] = useState(false);
