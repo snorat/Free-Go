@@ -1,11 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Concert+One&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap%27");
+@import url("https://fonts.googleapis.com/css2?family=Concert+One&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
 :root {
-  --font-family-1: "Concert One", cursive;
+  --font-family: "Concert One", cursive;
   --font-family: "Lato", sans-serif;
   --color-navbar: #fef1eb;
   --color-footer: #d4e8e2;
-  --color-main-background: #ffffff;
+  --color-main-background: #ffffff; /* White backgroud*/
   --color-card-background: #ffbbb7;
   --color-second-background: #fddccf;
   --color-third-background: #f6f0e7;
@@ -16,12 +16,10 @@
 }
 
 * {
+  font-family: Lato; /* Main font */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   list-style-type: none;
-}
-
-body {
-  height: 100vh;
+  /* border: 1px solid red; */
 }

@@ -4,7 +4,8 @@ import Content from "./components/Content";
 import Footer from "./components/Footer";
 import "./styles/Navbar.css";
 
-function App() {
+export default function App() {
+  
   return (
     <div className="App">
       <Navbar />
@@ -13,5 +14,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
