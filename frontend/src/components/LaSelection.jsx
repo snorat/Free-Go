@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import "../styles/LaSelection.css";
 
 function LaSelection() {
+  const apiKey = import.meta.env.VITE_API_KEY;
   const [meals, setMeals] = useState(null);
   useEffect(() => {
     axios
-      .get("https://www.themealdb.com/api/json/v2/9973533/random.php")
+      .get(`https://www.themealdb.com/api/json/v2/${apiKey}/random.php`)
       .then((response) => {
         setMeals(response.data.meals[0]);
       });
