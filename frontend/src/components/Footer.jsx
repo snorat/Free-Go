@@ -4,7 +4,7 @@ import Instagram from "../assets/images/Instagram.png";
 import Twitter from "../assets/images/Twitter.png";
 import Facebook from "../assets/images/Facebook.png";
 import Youtube from "../assets/images/Youtube.png";
-import "../styles/footer.css";
+import "../styles/Footer.css";
 
 function Footer() {
   return (
