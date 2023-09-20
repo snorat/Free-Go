@@ -1,31 +1,42 @@
-/* Card.css */
-
-.e-card {
-  border: 1px solid #aaa1a1;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(233, 113, 113, 0.51);
-  padding: 16px;
-  text-align: center;
-  background-color: #ead0d0;
-  max-width: 300px;
-  margin: 0 auto;
+.search-containeur {
+  margin: 20px auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.e-card-image img {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 16px;
+.search-containeur input {
+  height: 2rem;
+  width: 20rem;
+  padding: 15px;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 0 5px var(--color-text);
 }
 
-.navLinkText {
-  padding: 3px 10px; /* Adjust the padding as needed */
-  border: 1px solid #fef1eb; /* Add a border */
-  border-radius: 5px; /* Add rounded corners */
-  background: linear-gradient(to right bottom, #e0007b, #f86525);
+.search-containeur button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-btn-2);
+  border: none;
+  color: var(--color-text);
+  cursor: pointer;
+  height: 2rem;
+  width: 8rem;
+  border-radius: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
-.navLink:not(.active):hover {
-  padding: 5px; /*gives lengthy highlingting */
-  border-radius: 10px; /*curved borders*/
-  background-color: var(--color-card-background);
+.search-containeur button :hover {
+  background-color: var(--color-btn-1);
+}
+
+@media (min-width: 620px) {
+  .search-containeur input {
+    width: 40rem;
+  }
 }

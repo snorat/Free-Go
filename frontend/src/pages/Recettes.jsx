@@ -1,11 +1,9 @@
 import React from "react";
 
-function Recettes() {
+export default function Recettes() {
   return (
     <div>
-      <h2>Nos recettes</h2>
+      <h1>Nos recettes</h1>
     </div>
   );
 }
-
-export default Recettes;
