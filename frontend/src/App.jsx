@@ -1,7 +1,7 @@
-import "./App.css";
 import Navbar from "./components/Navbar";
-import Content from "./components/Content";
 import Footer from "./components/Footer";
+import "./styles/app.css";
+import Content from "./components/Content";
 
 export default function App() {
   return (
