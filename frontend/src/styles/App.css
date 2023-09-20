@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Concert+One&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
- :root {
+:root {
   --font-family-1: "Concert One", cursive;
   --font-family: "Lato", sans-serif;
   --color-navbar: #fef1eb;
@@ -14,7 +14,6 @@
   --color-text: #333333;
   --color-text-clair: #666666;
 }
-
 
 * {
   font-family: Lato; /* Main font */
