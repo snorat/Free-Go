@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import searchIcon from "../assets/images-searchbar/emoji.png";
-import "../styles/SearchBar.css";
+import "../styles/searchBar.css";
 
 export default function SearchBar() {
   const apiKey = import.meta.env.VITE_API_KEY;
