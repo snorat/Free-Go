@@ -1,0 +1,101 @@
+.laSelection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+.web {
+  margin-left: 63px;
+}
+
+.enTete {
+  font-family: var(--font-family);
+  background-color: var(--color-navbar);
+  border-radius: 20px;
+  font-size: 1.4rem;
+  width: 60%;
+  text-align: center;
+  position: sticky;
+  top: 64px;
+}
+.enTete > h3 {
+  font-weight: 800;
+  padding-bottom: 20px;
+}
+
+.picturePrincipal {
+  width: 80%;
+  border-radius: 20px 20px 0 0;
+}
+
+.divText {
+  background-color: var(--color-card-background);
+  border-radius: 0 0 20px 20px;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.divText > h5 {
+  margin-top: 40px;
+  text-decoration: underline;
+  font-size: 1rem;
+  font-weight: 800;
+}
+/*bouton d'origine*/
+.divText > button {
+  background-color: var(--color-text);
+  color: var(--color-third-background);
+  width: 40%;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+  padding: 0.1rem;
+  font-weight: 700;
+}
+
+.divText > button:active,
+.divText > button:hover {
+  outline: 0;
+}
+
+/*.divText > button:hover span {
+  background: none;
+}*/
+
+.divText > button:active {
+  transform: scale(0.9);
+}
+
+@media screen and (min-width: 400px) {
+  .web {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+  }
+
+  .picturePrincipal {
+    width: 40%;
+    border-radius: 20px 0px 0 20px;
+  }
+
+  .divText {
+    border-radius: 0 20px 20px 0;
+    width: 40%;
+  }
+
+  .divText > button {
+    font-weight: 900;
+    margin-top: 150px;
+    padding: 10px;
+  }
+
+  .enTete {
+    width: 50%;
+    padding: 8px;
+  }
+}

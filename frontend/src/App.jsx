@@ -1,12 +1,14 @@
-import React from "react";
-import "./styles/cardInsp.css";
+import "./styles/App.css";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import Content from "./components/Content";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-      <h1>app</h1>
+      <Navbar />
+      <Content />
+      <Footer />
     </div>
   );
 }
-
-export default App;
