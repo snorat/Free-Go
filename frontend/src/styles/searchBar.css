@@ -3,7 +3,10 @@
   position: relative;
   display: flex;
   justify-content: center;
+  /* Center horizontally */
   align-items: center;
+  /* Center vertically */
+  /* height: 100vh;  /*Use the full viewport height */
 }
 
 .search-containeur input {

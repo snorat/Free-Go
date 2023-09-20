@@ -21,7 +21,7 @@
   width: 60%;
   align-items: center;
   padding: 10px;
-  border-radius:20px;
+  border-radius: 20px;
 }
 
 .card-description {
@@ -30,10 +30,9 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: center; 
+  text-align: center;
   align-items: center;
   padding: 10px;
-  
 }
 
 .card-des > .card-btn {
@@ -41,10 +40,10 @@
   justify-content: center;
   align-content: center;
   text-align: center;
-   width: 50%; 
+  width: 50%;
   border-radius: 5px;
   padding: 0.5rem 1rem;
-  background: linear-gradient(90deg, #E0007B 0%, #F86525 100%);
+  background: linear-gradient(90deg, #e0007b 0%, #f86525 100%);
   color: azure;
   text-decoration: none;
   margin: 1rem auto;
@@ -54,27 +53,23 @@
 @media screen and (min-width: 680px) {
   .card-container {
     display: flex;
-    flex-direction:row-reverse;
+    flex-direction: row-reverse;
     margin: auto;
     align-items: center;
-    
-  
   }
- .card-img {
+  .card-img {
     width: 40%;
     margin: 0;
-
   }
 
   .card-des > .card-description {
     align-items: center;
     font-size: 16px;
   }
- .card-des > .card-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  
- }
+  .card-des > .card-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
 }
