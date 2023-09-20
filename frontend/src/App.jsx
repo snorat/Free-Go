@@ -1,13 +1,10 @@
 import React from "react";
-import Footer from "./components/Footer";
-
-import "./styles/Footer.css";
-import "./App.css";
+import "./styles/cardInsp.css";
 
 function App() {
   return (
-    <div>
-      <Footer />
+    <div className="App">
+      <h1>app</h1>
     </div>
   );
 }
