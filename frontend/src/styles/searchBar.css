@@ -2,11 +2,8 @@
   margin: 20px auto;
   position: relative;
   display: flex;
-  justify-content: center;
-  /* Center horizontally */
-  align-items: center;
-  /* Center vertically */
-  /* height: 100vh;  /*Use the full viewport height */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
 }
 
 .search-containeur input {

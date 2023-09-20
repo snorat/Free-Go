@@ -1,6 +1,7 @@
 import React from "react";
 import SearchBar from "../components/SearchBar";
 import LaSelection from "../components/LaSelection";
+import TrendRecipe from "../components/TrendRecipe";
 import CardInsp from "../components/CardInsp";
 import Cake from "../assets/images/Cake.png";
 
@@ -8,8 +9,8 @@ export default function Homepage() {
   return (
     <div>
       <SearchBar />
-      <h1>Homepage</h1>
       <LaSelection />
+      <TrendRecipe />
       <CardInsp
         imgSrc={Cake}
         imgAlt="cake-image"
