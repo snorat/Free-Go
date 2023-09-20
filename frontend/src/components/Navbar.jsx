@@ -1,9 +1,7 @@
-/* eslint-disable jsx-a11y/no-static-element-interactions */
-/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import React, { useState } from "react";
 import "../styles/Navbar.css";
+import "../styles/App.css";
 
 function Navbar() {
   const [isActive, setIsActive] = useState(false);
@@ -25,36 +23,56 @@ function Navbar() {
       </Link>
 
       <ul className={`navMenu ${isActive ? "active" : ""}`}>
-        <li onClick={removeActive}>
-          <NavLink to="/Homepage" className="navLink">
+        <li>
+          <NavLink
+            to="/"
+            className="navLink"
+            activeClassName="active"
+            onClick={removeActive}
+          >
             Homepage
           </NavLink>
         </li>
-        <li onClick={removeActive}>
-          <NavLink to="/Recettes" className="navLink">
+        <li>
+          <NavLink
+            to="/recettes"
+            className="navLink"
+            activeClassName="active"
+            onClick={removeActive}
+          >
             Recettes
           </NavLink>
         </li>
-        <li onClick={removeActive}>
-          <NavLink to="/Favoris" className="navLink">
+        <li>
+          <NavLink
+            to="/favoris"
+            className="navLink"
+            activeClassName="active"
+            onClick={removeActive}
+          >
             Favoris
           </NavLink>
         </li>
-        <li onClick={removeActive}>
-          <NavLink to="/Generateur" className="navLink">
+        <li>
+          <NavLink
+            to="/"
+            className="navLink"
+            activeClassName="active"
+            onClick={removeActive}
+          >
             <span className="navLinkText">Essayer FreeGo</span>
           </NavLink>
         </li>
       </ul>
-
-      <div
+      <button
+        type="button"
         className={`hamburger ${isActive ? "active" : ""}`}
         onClick={toggleActiveClass}
       >
         <span className="bar" />
         <span className="bar" />
         <span className="bar" />
-      </div>
+      </button>
     </nav>
   );
 }

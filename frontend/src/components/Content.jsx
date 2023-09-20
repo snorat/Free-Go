@@ -5,11 +5,12 @@ import Favoris from "../pages/Favoris";
 
 export default function Content() {
   return (
-    <Routes>
-      <Route path="/*" element={<Homepage />} />
-      <Route path="/Homepage" element={<Homepage />} />
-      <Route path="/Recettes" element={<Recettes />} />
-      <Route path="/Favoris" element={<Favoris />} />
-    </Routes>
+    <main>
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/recettes" element={<Recettes />} />
+        <Route path="/favoris" element={<Favoris />} />
+      </Routes>
+    </main>
   );
 }
