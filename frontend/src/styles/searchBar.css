@@ -1,0 +1,40 @@
+.search-containeur {
+  margin: 20px auto;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+.search-containeur input {
+  height: 2rem;
+  width: 20rem;
+  padding: 15px;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 0 5px var(--color-text);
+}
+
+.search-containeur button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-btn-2);
+  border: none;
+  color: var(--color-text);
+  cursor: pointer;
+  height: 2rem;
+  width: 8rem;
+  border-radius: 20px;
+  top: 0;
+  right: 0;
+}
+
+.search-containeur button :hover {
+  background-color: var(--color-btn-1);
+}
+
+@media (min-width: 620px) {
+  .search-containeur input {
+    width: 40rem;
+  }
+}

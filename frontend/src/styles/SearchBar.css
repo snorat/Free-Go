@@ -1,0 +1,31 @@
+/* Card.css */
+
+.e-card {
+  border: 1px solid #aaa1a1;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(233, 113, 113, 0.51);
+  padding: 16px;
+  text-align: center;
+  background-color: #ead0d0;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.e-card-image img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 16px;
+}
+
+.navLinkText {
+  padding: 3px 10px; /* Adjust the padding as needed */
+  border: 1px solid #fef1eb; /* Add a border */
+  border-radius: 5px; /* Add rounded corners */
+  background: linear-gradient(to right bottom, #e0007b, #f86525);
+}
+
+.navLink:not(.active):hover {
+  padding: 5px; /*gives lengthy highlingting */
+  border-radius: 10px; /*curved borders*/
+  background-color: var(--color-card-background);
+}

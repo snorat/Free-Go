@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.Footer {
+  background-color: var(--color-footer);
+  font-family: var(--font-family);
+  padding: 10px;
+  list-style: none;
+  color: #333333;
+}
+.Plan {
+  padding: 0px;
+  padding: 0;
+  font-size: 16px;
+}
+
+.logo {
+  font-family: var(--font-family-1);
+  font-size: 18px;
+  color: #333333;
+  text-align: left;
+}
+.slogan {
+  font-size: 16px;
+  color: #333333;
+  text-align: left;
+  padding-bottom: 20px;
+}
+
+.socialmedia {
+  justify-content: flex-end;
+}
+
+.fig {
+  padding-top: 5px;
+}
+
+.fig img {
+  width: 24px;
+  height: 24px;
+  justify-content: center;
+  flex-direction: row;
+  margin: 10px;
+}
+
+@media screen and (max-width: 680px) {
+  .Footer > .Plan {
+    display: none;
+  }
+}
+@media screen and (min-width: 680px) {
+  .Footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5rem;
+  }
+  :link {
+    color: var(--color-text);
+    text-decoration: none;
+  }
+}
