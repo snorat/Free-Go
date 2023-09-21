@@ -4,10 +4,12 @@ import LaSelection from "../components/LaSelection";
 import TrendRecipe from "../components/TrendRecipe";
 import CardInsp from "../components/CardInsp";
 import Cake from "../assets/images/Cake.png";
+import WelcomeComponent from "../components/WelcomeComponent";
 
 export default function Homepage() {
   return (
     <div>
+      <WelcomeComponent />
       <SearchBar />
       <LaSelection />
       <TrendRecipe />
