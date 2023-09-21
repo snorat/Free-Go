@@ -1,6 +1,5 @@
 .search-containeur {
   margin: 20px auto;
-  position: relative;
   display: flex;
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
@@ -26,7 +25,6 @@
   height: 2rem;
   width: 8rem;
   border-radius: 20px;
-  position: absolute;
   top: 0;
   right: 0;
 }
