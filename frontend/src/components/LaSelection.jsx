@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "../styles/LaSelection.css";
+import { Link } from "react-router-dom";
 
 function LaSelection() {
   const apiKey = import.meta.env.VITE_API_KEY;
@@ -12,12 +13,6 @@ function LaSelection() {
         setMeals(response.data.meals[0]);
       });
   }, []);
-
-  function getMeal() {
-    if (meals) {
-      console.info(meals.idMeal);
-    }
-  }
 
   return (
     meals && (
@@ -33,9 +28,9 @@ function LaSelection() {
           />
           <div className="divText">
             <h5>{meals.strMeal}</h5>
-            <button type="button" onClick={getMeal}>
-              See the recipe
-            </button>
+            <Link to={`/recipedetails/${meals.idMeal}`}>
+              <button type="button">See the recipe</button>
+            </Link>
           </div>
         </div>
       </section>
