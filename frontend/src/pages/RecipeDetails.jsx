@@ -3,13 +3,15 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import "../styles/RecipeDetails.css";
 
+const apiKey = import.meta.env.VITE_API_KEY;
+
 export default function RecipeDetails() {
   const { id } = useParams();
   const [data, setData] = useState(null);
 
   useEffect(() => {
     axios
-      .get(`https://www.themealdb.com/api/json/v2/9973533/lookup.php?i=${id}`)
+      .get(`https://www.themealdb.com/api/json/v2/${apiKey}/lookup.php?i=${id}`)
       .then((response) => {
         setData(response.data.meals[0]);
       })
@@ -25,11 +27,12 @@ export default function RecipeDetails() {
 
   return (
     <div className="Details">
-      <img src={data.strMealThumb} alt={data.strMeal} />
       <div className="heart">
         <h2>{data.strMeal}</h2>
         <div className="pulsing" />
       </div>
+      <img src={data.strMealThumb} alt={data.strMeal} />
+
       <div className="ingredient">
         <h3>Ingrédients</h3>
         {Array.from({ length: 20 }, (_, i) => i + 1).map((index) => {
