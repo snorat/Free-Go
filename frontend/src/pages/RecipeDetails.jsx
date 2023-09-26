@@ -25,12 +25,26 @@ export default function RecipeDetails() {
     return <div>Chargement en cours...</div>;
   }
 
+  const addRecipeToFavoris = (idMeal) => {
+    const favoris = JSON.parse(localStorage.getItem("favoris")) || [];
+    if (!favoris.includes(idMeal)) {
+      favoris.push(idMeal);
+      localStorage.setItem("favoris", JSON.stringify(favoris));
+    }
+    console.info(idMeal);
+  };
+
   return (
     <div className="Details">
       <div className="heart">
+        <div />
         <h2>{data.strMeal}</h2>
         <div className="pulsing" />
+        <button type="button" onClick={() => addRecipeToFavoris(id)}>
+          Favoris
+        </button>{" "}
       </div>
+
       <img src={data.strMealThumb} alt={data.strMeal} />
 
       <div className="ingredient">
