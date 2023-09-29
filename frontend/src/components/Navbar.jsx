@@ -55,7 +55,7 @@ function Navbar() {
         </li>
         <li>
           <NavLink
-            to="/"
+            to="/tryfreego"
             className="navLink"
             activeClassName="active"
             onClick={removeActive}

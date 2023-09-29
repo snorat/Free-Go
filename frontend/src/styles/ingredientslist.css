@@ -1,0 +1,99 @@
+/* Style pour les buttons */
+
+.main-button-container > h1 {
+  text-align: center;
+  margin: 100px;
+}
+
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 10px;
+}
+
+button {
+  background-color: white;
+  border: 1px solid #333;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: var(--color-btn-2);
+}
+
+button img {
+  max-width: 100%;
+  max-height: 30px;
+}
+
+/* Style pour la liste de recettes */
+
+.recipe-list {
+  width: 98%;
+  margin: 20px;
+}
+
+.recipe-list li {
+  list-style: none;
+  margin-bottom: 20px;
+  padding: 30px;
+  box-shadow: 2px 2px 4px rgba(0.2, 0, 0, 0.3);
+}
+
+.recipe-list li a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+}
+
+.recipe-list li:hover {
+  background-color: #f0f0f0;
+}
+
+.recipe-list li img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+/* Style pour chaque élément de la liste de recettes */
+
+.recipe-item {
+  list-style: none;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+}
+
+.recipe-item a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.recipe-item a:hover {
+  background-color: #f0f0f0;
+}
+
+.recipe-item img {
+  width: 30%;
+  height: auto;
+  margin-right: 10px;
+}
+
+.view-recipe-button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.view-recipe-button:hover {
+  background-color: var(--color-btn-1);
+}

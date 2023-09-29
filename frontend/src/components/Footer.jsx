@@ -10,8 +10,7 @@ function Footer() {
   return (
     <div className="Footer">
       <div className="slogan">
-        <img src="" alt="Free Go" />
-        <p>Redonnez vie à votre frigo</p>
+        <img src="src/assets/logo-freego.png" alt="Free Go" />
       </div>
       <div className="Plan">
         <h4>PLAN DU SITE</h4>

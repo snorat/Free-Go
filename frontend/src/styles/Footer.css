@@ -27,6 +27,10 @@
   text-align: left;
   padding-bottom: 20px;
 }
+.slogan > img {
+  width: 20vh;
+  height: auto;
+}
 
 .socialmedia {
   justify-content: flex-end;
