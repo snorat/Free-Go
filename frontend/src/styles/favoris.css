@@ -1,0 +1,24 @@
+.favoris_result {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0 20px 0;
+  padding: 3rem;
+  /* border: 3px solid red; */
+}
+
+.favoris_result > h5 {
+  color: var(--color-text);
+  text-decoration: underline;
+  font-weight: 2000px;
+}
+
+.favoris_result > button {
+  background-color: var(--color-btn-2);
+  border-radius: 20px;
+}
+.picturePrincipal {
+  border-radius: 15px;
+  box-shadow: -1px 1px 25px 7px rgba(51, 51, 51, 0.5);
+}
