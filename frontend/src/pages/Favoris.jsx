@@ -5,23 +5,21 @@ import "../styles/favoris.css";
 import Welcofavoris from "../components/Welcofavoris";
 
 export default function Favoris() {
+  const apiKey = import.meta.env.VITE_API_KEY;
+  const [recipes, setRecipes] = useState([]);
+
   const removeFavoris = (idMeal) => {
-    const favoris = JSON.parse(localStorage.getItem("favoris")) || [];
-    const updatedFavoris = favoris.filter((favori) => favori !== idMeal);
+    const localFavoris = JSON.parse(localStorage.getItem("favoris")) || [];
+    const updatedFavoris = localFavoris.filter((favori) => favori !== idMeal);
     localStorage.setItem("favoris", JSON.stringify(updatedFavoris));
     window.location.reload();
   };
 
-  const apiKey = import.meta.env.VITE_API_KEY;
-  const [favoris, setFavoris] = useState([]);
-  const [recipes, setRecipes] = useState([]);
-
   useEffect(() => {
     const localFavoris = JSON.parse(localStorage.getItem("favoris")) || [];
-    setFavoris(localFavoris);
 
     // Charger les détails des recettes en favoris depuis l'API
-    const requests = favoris.map((idMeal) => {
+    const requests = localFavoris.map((idMeal) => {
       return axios.get(
         `https://www.themealdb.com/api/json/v2/${apiKey}/lookup.php?i=${idMeal}`
       );
