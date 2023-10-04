@@ -4,7 +4,7 @@ import Instagram from "../assets/images/Instagram.png";
 import Twitter from "../assets/images/Twitter.png";
 import Facebook from "../assets/images/Facebook.png";
 import Youtube from "../assets/images/Youtube.png";
-import "../styles/footer.css";
+import "../styles/Footer.css";
 
 function Footer() {
   return (
@@ -14,18 +14,17 @@ function Footer() {
       </div>
       <div className="Plan">
         <h4>PLAN DU SITE</h4>
-
-        <Link to="/accueil">
-          <p>Accueil</p>
+        <Link to="/">
+          <p>Homepage</p>
         </Link>
-        <Link to="/nos-recettes">
-          <p>Nos recettes</p>
+        <Link to="/categories">
+          <p>Recipes</p>
         </Link>
-        <Link to="/free-go">
-          <p>Free-Go</p>
+        <Link to="/TryFreeGo">
+          <p>TryFreeGo</p>
         </Link>
-        <Link to="/vos-favoris">
-          <p>Vos favoris</p>
+        <Link to="/Favoris">
+          <p>Favorites</p>
         </Link>
         <Link to="/contact">
           <p>Contact</p>
