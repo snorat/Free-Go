@@ -16,7 +16,7 @@ export default function CardInsp({
       <div className="card-des">
         {description && <p className="card-description">{description}</p>}
         {buttonText && link && (
-          <a href={link} className="card-btn">
+          <a href={/tryfreego/} className="card-btn">
             {buttonText}
           </a>
         )}

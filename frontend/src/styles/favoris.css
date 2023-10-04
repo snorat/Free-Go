@@ -7,11 +7,13 @@
   padding: 3rem;
 }
 
-.favoris_result > h5 {
+.title-recipes {
   color: var(--color-text);
   text-decoration: underline;
   font-weight: 900;
   font-size: 1.3rem;
+  margin: 20px;
+  background-color: aqua;
 }
 
 .favoris_result > button {
