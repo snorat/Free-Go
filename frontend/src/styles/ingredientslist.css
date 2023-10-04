@@ -12,18 +12,18 @@
   margin: 10px;
 }
 
-button {
+.button_list {
   background-color: white;
   border: 1px solid #333;
   padding: 10px 20px;
   border-radius: 5px;
 }
 
-button:hover {
+.button_list:hover {
   background-color: var(--color-btn-2);
 }
 
-button img {
+.button_list > img {
   max-width: 100%;
   max-height: 30px;
 }

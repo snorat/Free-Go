@@ -29,7 +29,9 @@ function LaSelection() {
           <div className="divText">
             <h5>{meals.strMeal}</h5>
             <Link to={`/recipedetails/${meals.idMeal}`}>
-              <button type="button">See the recipe</button>
+              <button className="button1" type="button">
+                See the recipe
+              </button>
             </Link>
           </div>
         </div>

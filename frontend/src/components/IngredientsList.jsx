@@ -47,6 +47,7 @@ export default function IngredientsList() {
       <div className="button-container">
         {lists.map((ingredient) => (
           <button
+            className="button_ingredient"
             type="button"
             key={ingredient.idIngredient}
             onClick={() => fetchRecipes(ingredient.strIngredient)}

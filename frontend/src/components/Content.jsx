@@ -4,6 +4,7 @@ import Recettes from "../pages/Recettes";
 import Favoris from "../pages/Favoris";
 import TryFreeGo from "../pages/TryFreeGo";
 import RecipeDetails from "../pages/RecipeDetails";
+import SearchResult from "./SearchResult";
 
 export default function Content() {
   return (
@@ -14,6 +15,7 @@ export default function Content() {
         <Route path="/tryfreego" element={<TryFreeGo />} />
         <Route path="/favoris" element={<Favoris />} />
         <Route path="/recipedetails/:id" element={<RecipeDetails />} />
+        <Route path="/search/:searchTerm" element={<SearchResult />} />
       </Routes>
     </main>
   );
