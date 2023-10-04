@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import axios from "axios";
+import RecipeList from "../components/RecipeList";
 
 export default function Recettes() {
   const apiKey = import.meta.env.VITE_API_KEY;
@@ -20,18 +21,13 @@ export default function Recettes() {
   }, [categoryName]);
 
   return (
-    <div>
-      <h2>Recipes in Category: {categoryName}</h2>
-      <ul>
-        {recipes.map((recipe) => (
-          <li key={recipe.idMeal}>
-            <Link to={`/recipedetails/${recipe.idMeal}`}>
-              <img src={recipe.strMealThumb} alt={recipe.strMeal} />
-              {recipe.strMeal}
-            </Link>
-          </li>
+    <>
+      <h2>Result for the search : {categoryName}</h2>
+      <div>
+        {recipes.map((meal) => (
+          <RecipeList key={meal.idMeal} meal={meal} />
         ))}
-      </ul>
-    </div>
+      </div>
+    </>
   );
 }
