@@ -43,6 +43,11 @@ export default function Favoris() {
   return (
     <>
       <Welcofavoris />
+      <div className="title-with-lines">
+        <div className="line left-line" />
+        <h2>My Favorite Recipes</h2>
+        <div className="line right-line" />
+      </div>
       <div className="favoris">
         {recipes.map((recipe) => (
           <div key={recipe.idMeal} className="favoris_result">
@@ -53,7 +58,7 @@ export default function Favoris() {
               alt={recipe.strMeal}
             />
             <button type="button" onClick={() => removeFavoris(recipe.idMeal)}>
-              Delete favoris
+              Delete favorites
             </button>
           </div>
         ))}

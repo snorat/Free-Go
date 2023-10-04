@@ -13,18 +13,19 @@
   background: rgba(240, 234, 234, 0.84);
   color: var(--color-text);
   width: 15rem;
-  height: 8rem;
+  height: 10rem;
   text-align: center;
   border-radius: 30px;
   padding-top: 15px;
 }
-.image_favoris > h2 {
-  margin-top: 20px;
+.image_favoris > h3 {
+  margin-top: 10px;
   color: var(--color-text);
 }
 .text_favoris {
   font-size: 0.8rem;
 }
+
 .image_favoris > p {
   color: var(--color-text);
 }
@@ -32,5 +33,15 @@
 @media (min-width: 620px) {
   .container_favoris {
     height: 90vh;
+  }
+  .image_favoris {
+    width: 30rem;
+    height: 16rem;
+  }
+  .image_favoris > h3 {
+    font-size: 2rem;
+  }
+  .text_favoris {
+    font-size: 1.1rem;
   }
 }
