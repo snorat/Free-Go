@@ -1,5 +1,6 @@
 /* eslint-disable no-restricted-syntax */
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import "../styles/favoris.css";
 import Welcofavoris from "../components/Welcofavoris";
@@ -51,7 +52,9 @@ export default function Favoris() {
       <div className="favoris">
         {recipes.map((recipe) => (
           <div key={recipe.idMeal} className="favoris_result">
-            <h5>{recipe.strMeal}</h5>
+            <Link to={`/recipedetails/${recipe.idMeal}`}>
+              <h5>{recipe.strMeal} </h5>
+            </Link>
             <img
               className="picturePrincipal"
               src={recipe.strMealThumb}
