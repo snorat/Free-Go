@@ -1,36 +1,31 @@
-import React, { useState } from "react";
-import axios from "axios";
-import searchIcon from "../assets/images-searchbar/emoji.png";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 import "../styles/searchBar.css";
 
 export default function SearchBar() {
-  const apiKey = import.meta.env.VITE_API_KEY;
-  const [searchTerm, setSearchTerm] = useState("");
+  const [userResearch, setUserResearch] = useState("");
+  const navigate = useNavigate();
 
-  const handleSearch = () => {
-    axios
-      .get(
-        `https://www.themealdb.com/api/json/v2/${apiKey}/search.php?s=${searchTerm}`
-      )
-      .then((response) => {
-        console.info(response);
-      })
-      .catch((error) => {
-        console.error("Error searching:", error);
-      });
+  const handleSubmit = () => {
+    navigate(`/search/${userResearch}`);
   };
+
+  const handleSearch = (event) => {
+    setUserResearch(event.target.value);
+  };
+
   return (
-    <div className="search-containeur">
-      <input
-        placeholder="Search the site..."
-        type="text"
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
-      />
-      <button onClick={handleSearch} type="submit">
-        Search
-        <img src={searchIcon} alt="Search" />
-      </button>
-    </div>
+    <form className="main_searchbar" onSubmit={handleSubmit}>
+      <h2>Find what you're looking for on Free-Go, and much more!</h2>
+      <div className="both_input">
+        <input
+          className="input_search"
+          type="text"
+          placeholder="search on free-go"
+          onChange={handleSearch}
+        />
+        <input className="input_button" type="submit" value="Search" />
+      </div>
+    </form>
   );
 }
