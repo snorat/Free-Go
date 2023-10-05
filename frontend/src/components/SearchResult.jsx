@@ -8,10 +8,6 @@ export default function SearchResult() {
   const [data, setData] = useState([]);
   const { searchTerm } = useParams();
   const apiKey = import.meta.env.VITE_API_KEY;
-  const mystyle = {
-    backgroundColor: "#E1F4F4",
-    padding: "50px",
-  };
 
   useEffect(() => {
     axios
@@ -26,7 +22,15 @@ export default function SearchResult() {
   return (
     <>
       <SearchBar />
-      <h2 style={mystyle}>Résultat de la recherche pour : {searchTerm}</h2>
+      <h2
+        style={{
+          backgroundColor: "#E1F4F4",
+          padding: "50px",
+          textAlign: "center",
+        }}
+      >
+        Résultat de la recherche pour : {searchTerm}
+      </h2>
       <div>
         {data.map((meal) => (
           <RecipeList key={meal.idMeal} meal={meal} />

@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "../styles/trendrecipe.css";
+import { Link } from "react-router-dom";
 
 export default function Homepage() {
   const apiKey = import.meta.env.VITE_API_KEY;
@@ -24,11 +25,13 @@ export default function Homepage() {
 
   return (
     <div className="recipe-layout">
-      <h1>Recipe Trend</h1>
+      <h1>Recipe Trends</h1>
       {recipes.map((recipe) => (
         <div key={recipe.idMeal} className="recipe-container">
-          <img src={recipe.strMealThumb} alt={recipe.strMeal} />
-          <div className="recipe-name">{recipe.strMeal}</div>
+          <Link to={`/recipedetails/${recipe.idMeal}`}>
+            <img src={recipe.strMealThumb} alt={recipe.strMeal} />
+            <div className="recipe-name">{recipe.strMeal}</div>
+          </Link>
         </div>
       ))}
     </div>

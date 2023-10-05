@@ -60,28 +60,32 @@ export default function IngredientSearchBar() {
         <input type="text" value={inputValue} onChange={handleChange} />
         <input type="submit" value="Search" />
       </form>
-      {ingredients.map((ingredient) => (
-        <div key={ingredient}>
-          <p>{ingredient}</p>
-          <button type="button" onClick={() => deleteIngredient(ingredient)}>
-            Delete
-          </button>
-        </div>
-      ))}
+      <div className="li-test">
+        {ingredients.map((ingredient) => (
+          <div className="list-ingredient-button" key={ingredient}>
+            <p>{ingredient}</p>
+            <button type="button" onClick={() => deleteIngredient(ingredient)}>
+              Delete
+            </button>
+          </div>
+        ))}
+      </div>
       {searched && data.length === 0 ? (
-        <p>No recipe</p>
+        <div className="alert_button">
+          <p>Sorry, there is no recipe ...</p>
+        </div>
       ) : (
-        <ul>
+        <ul className="recipe-item1">
           {data.map((meal) => (
-            <li key={meal.idMeal} className="recipe-item1">
+            <li key={meal.idMeal}>
               <Link to={`/recipedetails/${meal.idMeal}`}>
                 <div className="recipe-content1">
-                  <img src={meal.strMealThumb} alt={meal.strMeal} />
                   <h3>{meal.strMeal}</h3>
+                  <img src={meal.strMealThumb} alt={meal.strMeal} />
+                  <button type="button" className="view-recipe-button1">
+                    See the recipe
+                  </button>
                 </div>
-                <button type="button" className="view-recipe-button1">
-                  See the recipe
-                </button>
               </Link>
             </li>
           ))}

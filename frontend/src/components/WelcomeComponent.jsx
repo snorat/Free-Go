@@ -6,12 +6,12 @@ export default function WelcomeComponent() {
   return (
     <div className="wave-container">
       <div className="image-caption">
-        <h3>Free-Go transforme ton frigo en une mine d’or.</h3>
+        <h3>Free-Go transforms your fridge into a gold mine</h3>
         <p className="textwelcome">
           {" "}
-          ✔️ Des recettes qui s’adaptent à ton frigo <br />
-          ✔️ Utilise ce que tu as chez toi pour cuisiner <br />
-          ✔️ – de gaspillage, + d’économies, – de perte de temps{" "}
+          ✔️ Recipes that adapt to your fridge <br />
+          ✔️Use what you have at home to cook <br />
+          ✔️Less waste, more savings, and no time wasted{" "}
         </p>
       </div>
     </div>

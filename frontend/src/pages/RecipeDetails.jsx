@@ -40,25 +40,31 @@ export default function RecipeDetails() {
         <div />
         <h2>{data.strMeal}</h2>
         <div className="pulsing" />
-        <button type="button" onClick={() => addRecipeToFavoris(id)}>
-          Favoris
+        <button
+          className="mybutton"
+          type="button"
+          onClick={() => addRecipeToFavoris(id)}
+        >
+          Add to my favorites
         </button>{" "}
       </div>
+      <div className="test">
+        <img src={data.strMealThumb} alt={data.strMeal} />
 
-      <img src={data.strMealThumb} alt={data.strMeal} />
-
-      <div className="ingredient">
-        <h3>Ingrédients</h3>
-        {Array.from({ length: 20 }, (_, i) => i + 1).map((index) => {
-          const ingredient = data[`strIngredient${index}`];
-          const measure = data[`strMeasure${index}`];
-          return ingredient && measure ? (
-            <h5 key={index}>
-              {measure} {ingredient}
-            </h5>
-          ) : null;
-        })}
+        <div className="ingredient">
+          <h3>Ingredients:</h3>
+          {Array.from({ length: 20 }, (_, i) => i + 1).map((index) => {
+            const ingredient = data[`strIngredient${index}`];
+            const measure = data[`strMeasure${index}`];
+            return ingredient && measure ? (
+              <h5 key={index}>
+                {measure} {ingredient}
+              </h5>
+            ) : null;
+          })}
+        </div>
       </div>
+
       <div className="instruction">
         <h3>Instructions :</h3>
         <p>{data.strInstructions}</p>
