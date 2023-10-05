@@ -26,7 +26,7 @@ function Footer() {
         <Link to="/Favoris">
           <p>Favorites</p>
         </Link>
-        <Link to="/contact">
+        <Link to="/Contact">
           <p>Contact</p>
         </Link>
       </div>

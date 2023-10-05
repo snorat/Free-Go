@@ -1,0 +1,41 @@
+.page404 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.page404 > video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.page404 > a {
+  font-size: 1rem;
+  color: black;
+  background: var(--color-third-background);
+  padding: 1rem;
+  opacity: 0.8;
+  border-radius: 50px 0 50px 0;
+  font-family: var(--font-family-1);
+}
+@media screen and (min-width: 620px) {
+  .page404 > a {
+    font-size: 1rem;
+    color: black;
+    background: var(--color-third-background);
+    padding: 1rem;
+    opacity: 0.8;
+    border-radius: 50px 0 50px 0;
+    font-family: var(--font-family-1);
+  }
+}
