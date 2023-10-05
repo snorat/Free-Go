@@ -1,14 +1,29 @@
 .Details {
+  padding-top: 50px;
+  background-color: bisque;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  align-items: center;
+  margin: auto;
 }
 
-.Details > img {
-  width: 95%;
-  height: 30%;
+.Details > div {
+  /* flex-direction: column; */
+  text-align: center;
+}
+
+.test > img {
+  width: 80%;
+  height: auto;
   border-radius: 20px;
   margin: auto;
   margin-top: 10px;
+  text-align: center;
+}
+.heart {
+  display: flex;
+  flex-direction: column;
 }
 
 .heart > h2 {
@@ -17,13 +32,13 @@
   font-weight: 900;
 }
 
-.heart {
+/* Regroupe le titre le coeur et le bouton add to my favorites ???? */
+/* .heart > div {
   display: flex;
-  justify-content: space-between;
-  margin: 10px;
-}
+  justify-content: flex-end;
+} */
 
-.pulsing {
+/* .pulsing {
   width: 30px;
   height: 30px;
   color: var(--color-btn-1);
@@ -34,67 +49,64 @@
     linear-gradient(to bottom right, currentColor 42%, #0000 43%) bottom right;
   background-size: 50% 50%;
   background-repeat: no-repeat;
-  position: initial;
-}
+} */
 
-.ingredient {
+.mybutton {
+  margin-top: 10px;
+  border: none;
+  background-color: var(--color-btn-1);
+  padding: 10px;
+  display: block;
+  border-radius: 10px;
+  color: white;
+
+  &:hover {
+    background-color: var(--color-btn-2);
+  }
+}
+.test > .ingredient {
+  margin-top: 20px;
   text-align: center;
+  width: 100%;
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+.test > .ingredient > h3 {
+  font-weight: 900;
 }
 
-.instruction {
+.Details > .instruction {
   margin: 50px 20px 50px 20px;
   background-color: var(--color-navbar);
   width: 90%;
   border-radius: 20px;
-}
-
-.instruction > h3 {
-  margin: 10px 0 0 20px;
-}
-.instruction > p {
+  line-height: 1.5;
   padding: 20px;
 }
-@media screen and (min-width: 400px) {
-  .Details > img {
-    width: 95%;
-    height: 500px;
-    border-radius: 20px;
-    margin: auto;
-    margin-top: 10px;
-    object-fit: cover;
-  }
-  .heart {
-    display: flex;
-    justify-content: center;
-    margin: 50px;
-  }
-  .heart > h2 {
-    color: var(--color-btn-1);
-    font-family: var(--font-family);
-    font-weight: 1000;
-    font-size: x-large;
-  }
 
-  .ingredient {
-    font-size: 1.2rem;
-  }
-  .ingredient > h3 {
-    margin-bottom: 15px;
-  }
-
-  .instruction {
-    margin: 50px 60px 50px 60px;
+@media screen and (min-width: 620px) {
+  .test > img {
     background-color: var(--color-navbar);
+    width: 400px;
+    margin: auto;
+  }
+
+  .test > .ingredient {
+    width: 50%;
+    height: auto;
+  }
+
+  .Details > .test {
+    padding: 20px;
     width: 90%;
-    border-radius: 20px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
   }
-  .instruction > h3 {
-    margin: 20px 0 0 60px;
-  }
-  .instruction > p {
-    padding: 20px 70px 50px 70px;
-  }
-  .pulsing {
-    justify-content: flex-end;
-  }
+  /* .heart{
+  background-color: Red;
+  display: flex;
+  justify-content: space-between;
+} */
 }

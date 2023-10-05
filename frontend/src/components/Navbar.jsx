@@ -17,9 +17,7 @@ function Navbar() {
   return (
     <nav className="navbar">
       <Link to="/" className="logo">
-        Free Go
-        <br />
-        <span className="slogan">Redonnez vie à votre frigo</span>
+        <img src="src/assets/logo-freego.png" alt="Free Go" />
       </Link>
 
       <ul className={`navMenu ${isActive ? "active" : ""}`}>
@@ -40,7 +38,7 @@ function Navbar() {
             activeClassName="active"
             onClick={removeActive}
           >
-            Recettes
+            Recipes
           </NavLink>
         </li>
         <li>
@@ -50,7 +48,7 @@ function Navbar() {
             activeClassName="active"
             onClick={removeActive}
           >
-            Favoris
+            Favorites
           </NavLink>
         </li>
         <li>
@@ -60,7 +58,7 @@ function Navbar() {
             activeClassName="active"
             onClick={removeActive}
           >
-            <span className="navLinkText">Essayer FreeGo</span>
+            <span className="navLinkText">Try FreeGo</span>
           </NavLink>
         </li>
       </ul>

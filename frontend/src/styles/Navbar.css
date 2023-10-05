@@ -16,6 +16,9 @@ a {
   top: 0;
   z-index: 1;
 }
+.logo > img {
+  width: 170px;
+}
 
 .logo {
   font-family: var(--font-family-1);
@@ -75,13 +78,15 @@ a {
 @media screen and (max-width: 780px) {
   .hamburger {
     display: block;
+    border: none;
+    background-color: transparent;
   }
 
   .navMenu {
     position: absolute;
     flex-direction: column;
     gap: 0;
-    top: 90px;
+    top: 70px;
     left: auto;
     right: -100%;
     justify-content: flex-start;

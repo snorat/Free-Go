@@ -3,29 +3,26 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: center;
-  flex-wrap: nowrap; */
 }
 .web {
-  margin: auto;
+  /* margin: auto; */
+  margin: 0;
 }
 
 .enTete {
   font-family: var(--font-family);
   background-color: var(--color-navbar);
-  border-radius: 20px;
-  font-size: 1.4rem;
-  text-align: center;
-  /* position: absolute;
-  margin-bottom: 450px; */
+  padding: 1rem;
+  border-radius: 10px;
 }
 .enTete > h3 {
-  padding: 10px;
+  font-size: 1.5rem;
 }
 
-.picturePrincipal {
+.picture-Principal {
   width: 100%;
   border-radius: 20px 20px 0 0;
+  margin: 0;
 }
 
 .divText {
@@ -36,75 +33,52 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding: 50px;
+  margin: 0;
 }
 .divText > h5 {
-  margin-top: 40px;
   text-decoration: underline;
   font-size: 1rem;
   font-weight: 800;
 }
 /*bouton d'origine*/
-.divText > .button1 {
-  background-color: var(--color-text);
-  color: var(--color-third-background);
-
-  border-radius: 20px;
-  display: flex;
-  justify-content: center;
+.button1 {
+  background-color: var(--color-btn-2);
+  border-radius: 10px;
+  border: none;
   margin: 2rem;
-  padding: 0.1rem;
-  font-weight: 700;
+  padding: 10px;
 }
 
-.divText > .button1:active,
-.divText > .button1:hover {
-  outline: 0;
+.button1:hover {
+  background-color: var(--color-btn-1);
 }
 
-/*.divText > button:hover span {
-  background: none;
-}*/
-
-.divText > .button1 :active {
-  transform: scale(0.9);
-}
-
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 620px) {
   .web {
     display: flex;
-    margin: auto;
     justify-content: center;
   }
 
-  .picturePrincipal {
+  .picture-Principal {
     width: 50%;
-    border-radius: 20px 0px 0 20px;
+    border-radius: 20px 0 0 20px;
   }
 
   .divText {
     border-radius: 0 20px 20px 0;
-    width: 50%;
+  }
+
+  .divText > h5 {
+    font-size: 1.5rem;
   }
 
   .button1 {
-    font-weight: 900;
-    margin-top: 150px;
-    padding: 10px;
+    font-size: 1rem;
   }
 
   .enTete {
     width: 40%;
-    padding: 5px;
-    /* position: absolute;
-    margin-bottom: 450px; */
-  }
-  .enTete > h3 {
-    font-weight: 800;
-    padding: 6px;
-  }
-  .divText > h5 {
-    margin-top: 200px;
-    font-size: 1rem;
-    font-weight: 800;
+    text-align: center;
   }
 }

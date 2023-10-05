@@ -22,7 +22,15 @@ export default function Recettes() {
 
   return (
     <>
-      <h2>Result for the search : {categoryName}</h2>
+      <h2
+        style={{
+          backgroundColor: "#E1F4F4",
+          padding: "50px",
+          textAlign: "center",
+        }}
+      >
+        Result for the search : {categoryName}
+      </h2>
       <div>
         {recipes.map((meal) => (
           <RecipeList key={meal.idMeal} meal={meal} />
