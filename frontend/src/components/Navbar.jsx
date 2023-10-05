@@ -35,7 +35,7 @@ function Navbar() {
         </li>
         <li>
           <NavLink
-            to="/recettes"
+            to="/categories"
             className="navLink"
             activeClassName="active"
             onClick={removeActive}
@@ -55,7 +55,7 @@ function Navbar() {
         </li>
         <li>
           <NavLink
-            to="/"
+            to="/tryfreego"
             className="navLink"
             activeClassName="active"
             onClick={removeActive}

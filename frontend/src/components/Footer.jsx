@@ -10,23 +10,21 @@ function Footer() {
   return (
     <div className="Footer">
       <div className="slogan">
-        <img src="" alt="Free Go" />
-        <p>Redonnez vie à votre frigo</p>
+        <img src="src/assets/logo-freego.png" alt="Free Go" />
       </div>
       <div className="Plan">
         <h4>PLAN DU SITE</h4>
-
-        <Link to="/accueil">
-          <p>Accueil</p>
+        <Link to="/">
+          <p>Homepage</p>
         </Link>
-        <Link to="/nos-recettes">
-          <p>Nos recettes</p>
+        <Link to="/categories">
+          <p>Recipes</p>
         </Link>
-        <Link to="/free-go">
-          <p>Free-Go</p>
+        <Link to="/TryFreeGo">
+          <p>TryFreeGo</p>
         </Link>
-        <Link to="/vos-favoris">
-          <p>Vos favoris</p>
+        <Link to="/Favoris">
+          <p>Favorites</p>
         </Link>
         <Link to="/contact">
           <p>Contact</p>
