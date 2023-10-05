@@ -6,6 +6,7 @@ import TryFreeGo from "../pages/TryFreeGo";
 import RecipeDetails from "../pages/RecipeDetails";
 import SearchResult from "./SearchResult";
 import RecipeCategory from "../pages/RecipeCategory";
+import Page404 from "../pages/Page404";
 
 export default function Content() {
   return (
@@ -19,6 +20,7 @@ export default function Content() {
         <Route path="/search/:searchTerm" element={<SearchResult />} />
         <Route path="/categories" element={<RecipeCategory />} />
         <Route path="/category/:categoryName" element={<Recettes />} />
+        <Route path="/*" element={<Page404 />} />
       </Routes>
     </main>
   );

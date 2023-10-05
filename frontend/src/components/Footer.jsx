@@ -23,6 +23,8 @@ function Footer() {
         <Link to="/Favoris">
           <p>Favorites</p>
         </Link>
+        <Link to="/Contact">
+          <p>Contact</p>
         <Link to="/TryFreeGo">
           <p>TryFreeGo</p>
         </Link>
