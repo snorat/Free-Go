@@ -25,6 +25,7 @@ function Footer() {
         </Link>
         <Link to="/Contact">
           <p>Contact</p>
+        </Link>
         <Link to="/TryFreeGo">
           <p>TryFreeGo</p>
         </Link>
