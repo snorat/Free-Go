@@ -15,7 +15,7 @@ export default function IngredientsList() {
       .get(`https://www.themealdb.com/api/json/v2/${apiKey}/list.php?i=list`)
       .then((response) => {
         // on demande à l'API de mettre les ingredients dans notre const lists
-        setLists(response.data.meals.slice(0, 20)); // affichage des 20 premiers ingrédients
+        setLists(response.data.meals.slice(0, 30)); // affichage des 20 premiers ingrédients
       })
       .catch((error) => {
         console.error(
@@ -43,42 +43,45 @@ export default function IngredientsList() {
 
   return (
     <div className="main-button-container">
-      <h1>Top 20's ingredients</h1>
+      <h1>Top 30's ingredients</h1>
       <div className="button-container">
         {lists.map((ingredient) => (
-          <button
-            className="button_ingredient"
-            type="button"
-            key={ingredient.idIngredient}
-            onClick={() => fetchRecipes(ingredient.strIngredient)}
-          >
-            <img
-              src={`https://www.themealdb.com/images/ingredients/${ingredient.strIngredient}-Small.png`}
-              alt={ingredient.strIngredient}
-            />
-            {ingredient.strIngredient}
-          </button>
+          <div className="button_ingredient">
+            <button
+              type="button"
+              key={ingredient.idIngredient}
+              onClick={() => fetchRecipes(ingredient.strIngredient)}
+            >
+              <div className="image-ingredient">
+                <img
+                  src={`https://www.themealdb.com/images/ingredients/${ingredient.strIngredient}-Small.png`}
+                  alt={ingredient.strIngredient}
+                />
+              </div>
+            </button>
+            <h5>{ingredient.strIngredient}</h5>
+          </div>
         ))}
       </div>
 
       {recipes.length > 0 && (
-        <div className="recipe-list">
-          <ul>
-            {recipes.map((recipe) => (
-              <li key={recipe.idMeal} className="recipe-item">
-                <Link to={`/recipedetails/${recipe.idMeal}`}>
-                  <div className="recipe-content">
-                    <img src={recipe.strMealThumb} alt={recipe.strMeal} />
-                    <h3>{recipe.strMeal}</h3>
-                  </div>
+        // <div className="recipe-list">
+        <ul className="recipe-item">
+          {recipes.map((recipe) => (
+            <li key={recipe.idMeal}>
+              <Link to={`/recipedetails/${recipe.idMeal}`}>
+                <div className="recipe-content">
+                  <h3>{recipe.strMeal}</h3>
+                  <img src={recipe.strMealThumb} alt={recipe.strMeal} />
                   <button type="button" className="view-recipe-button">
                     See the recipe
                   </button>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
+                </div>
+              </Link>
+            </li>
+          ))}
+        </ul>
+        // </div>
       )}
     </div>
   );

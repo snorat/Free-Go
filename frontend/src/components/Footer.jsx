@@ -20,14 +20,13 @@ function Footer() {
         <Link to="/categories">
           <p>Recipes</p>
         </Link>
-        <Link to="/TryFreeGo">
-          <p>TryFreeGo</p>
-        </Link>
         <Link to="/Favoris">
           <p>Favorites</p>
         </Link>
         <Link to="/Contact">
           <p>Contact</p>
+        <Link to="/TryFreeGo">
+          <p>TryFreeGo</p>
         </Link>
       </div>
       <div className="socialmedia">

@@ -22,7 +22,11 @@ export default function RecipeCategory() {
   return (
     <div className="container-category">
       <div className="image-principal">
-        <h3> Free go offers recipes based on your ingredients and not only</h3>
+        <h3>
+          {" "}
+          Free Go: Crafting delectable recipes, inspired by your ingredient
+          categories, and beyond
+        </h3>
       </div>
       <h2>Recipe Categories</h2>
       <ul className="category-list">

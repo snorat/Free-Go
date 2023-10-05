@@ -12,7 +12,7 @@
   width: 100%;
   margin-bottom: 20px;
   text-align: center;
-  font-family: var(--font-family-1);
+  font-size: 1.5rem;
 }
 
 .recipe-container {
