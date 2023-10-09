@@ -15,19 +15,19 @@ function Footer() {
       <div className="Plan">
         <h4>PLAN DU SITE</h4>
         <Link to="/">
-          <p>Homepage</p>
+          <p className="lien-text">Homepage</p>
         </Link>
         <Link to="/categories">
-          <p>Recipes</p>
+          <p className="lien-text">Recipes</p>
         </Link>
         <Link to="/Favoris">
-          <p>Favorites</p>
+          <p className="lien-text">Favorites</p>
         </Link>
         <Link to="/Contact">
-          <p>Contact</p>
+          <p className="lien-text">Contact</p>
         </Link>
         <Link to="/TryFreeGo">
-          <p>TryFreeGo</p>
+          <p className="lien-text">TryFreeGo</p>
         </Link>
       </div>
       <div className="socialmedia">

@@ -33,10 +33,10 @@
 }
 
 /* Regroupe le titre le coeur et le bouton add to my favorites ???? */
-/* .heart > div {
+.heart {
   display: flex;
-  justify-content: flex-end;
-} */
+  align-items: center;
+}
 
 /* .pulsing {
   width: 30px;
@@ -52,6 +52,7 @@
 } */
 
 .mybutton {
+  width: 150px;
   margin-top: 10px;
   border: none;
   background-color: var(--color-btn-1);
@@ -59,6 +60,7 @@
   display: block;
   border-radius: 10px;
   color: white;
+  font-weight: 900;
 
   &:hover {
     background-color: var(--color-btn-2);

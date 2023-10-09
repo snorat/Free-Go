@@ -15,16 +15,19 @@
   width: auto;
   text-align: center;
   padding: 1rem;
-  margin: 35% 0 0 35%;
+  margin: 35% 5% 0 35%;
   border-radius: 50px 0 50px 0;
-  font-weight: 500;
+  font-weight: 700;
   font-size: 20px;
 }
+
 .container-category > h2 {
   font-family: var(--font-family);
   font-size: 30px;
-  margin-top: 20px;
+  margin: 20px;
+  padding: 20px;
   text-align: center;
+  background-color: var(--color-third-background);
 }
 .category-list {
   list-style: none;
@@ -81,6 +84,7 @@
     width: 30rem;
     padding: 3rem;
     margin: 15% 0 0 60%;
+    font-size: 30px;
   }
   .image-principal {
     height: 80vh;

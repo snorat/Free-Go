@@ -53,7 +53,7 @@ export default function Favoris() {
         {recipes.map((recipe) => (
           <div key={recipe.idMeal} className="favoris_result">
             <Link to={`/recipedetails/${recipe.idMeal}`}>
-              <h5>{recipe.strMeal} </h5>
+              <h5 className="favoris-recipe-title">{recipe.strMeal} </h5>
             </Link>
             <img
               className="picturePrincipal"

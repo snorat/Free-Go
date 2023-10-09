@@ -15,12 +15,17 @@
   font-size: 16px;
 }
 
+.lien-text:hover {
+  background-color: lightseagreen;
+}
+
 .logo {
   font-family: var(--font-family-1);
   font-size: 18px;
   color: #333333;
   text-align: left;
 }
+
 .slogan {
   font-size: 16px;
   color: #333333;

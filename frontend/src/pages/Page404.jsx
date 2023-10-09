@@ -5,7 +5,7 @@ import "../styles/page404.css";
 export default function Page404() {
   return (
     <div className="page404">
-      <Link to="/Page404">
+      <Link to="/Page404" className="video-main-title">
         <h1>Oops! Not Found</h1>
         <h2>Erreur Page 404</h2>
       </Link>
